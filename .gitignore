@@ -2,3 +2,5 @@
 _bazelrc_generated
 #*
 /bazel-*
+.ijwb
+
