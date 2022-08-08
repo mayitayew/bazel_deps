@@ -132,10 +132,10 @@ def _get_sources(ctx, makefile_path, config_dict, prefix):
 def _impl(repository_ctx):
     repository_ctx.download_and_extract(
         url = [
-            "https://ffmpeg.org/releases/ffmpeg-3.4.2.tar.xz"
+            "https://ffmpeg.org/releases/ffmpeg-5.0.1.tar.xz"
         ],
-        sha256 = "2b92e9578ef8b3e49eeab229e69305f5f4cbc1fdaa22e927fc7fca18acccd740",
-        stripPrefix = "ffmpeg-3.4.2",
+        sha256 = "",
+        stripPrefix = "ffmpeg-5.0.1",
     )
 
     patch(repository_ctx)
@@ -295,6 +295,6 @@ def ffmpeg_repository(name):
         config_h = Label("//tools/workspace/ffmpeg:config.h"),
         patches = [
             # From: https://patchwork.ffmpeg.org/patch/8253/
-            Label("//tools/workspace/ffmpeg:using_dn_directive.diff"),
+            #Label("//tools/workspace/ffmpeg:using_dn_directive.diff"),
         ],
     )
