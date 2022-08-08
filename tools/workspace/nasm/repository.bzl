@@ -21,9 +21,9 @@ def nasm_repository(name):
     http_archive(
         name = name,
         urls = [
-            "https://www.nasm.us/pub/nasm/releasebuilds/2.13.03/nasm-2.13.03.tar.xz",
+            "https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/nasm-2.15.05.tar.bz2",
         ],
         sha256 = "812ecfb0dcbc5bd409aaa8f61c7de94c5b8752a7b00c632883d15b2ed6452573",
-        strip_prefix = "nasm-2.13.03",
+        strip_prefix = "nasm-2.15.05",
         build_file = Label("//tools/workspace/nasm:package.BUILD"),
     )
